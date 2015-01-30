@@ -14,8 +14,8 @@ def  main_function
 
   #intro start
   puts "What do you want to do ? Find a random number,
-  use a calculator, find an area of a triangle, find area of a circle, circumference of a circle.\n"
-  puts "Put in number 1 to 5\n"
+  use a calculator, find an area of a triangle, find area of a circle, circumference of a circle, area of a trapezium.\n"
+  puts "Put in number 1 to 6\n"
   current_answer = gets.chomp
   #find random number with randint or something like that
   #calculator function + , - , *, /
@@ -54,6 +54,9 @@ def  main_function
     circum_of_circle()
 
 
+  elsif current_answer == "6"
+    area_of_trapezium()
+
   else
     puts "What was that ?\n"
     #give restart function
@@ -68,10 +71,36 @@ end
 #----------------------------------------------------
 #FUNCTIONS
 
+#area of trapezium
+
+def area_of_trapezium
+    puts "Whats your first base"
+    base1 = gets.chomp
+    int_base1 = base1.to_i
+
+    puts "Whats your second base?"
+    base2 = gets.chomp
+    int_base2 = base2.to_i
+    answer = int_base1 + int_base2
+    first_answer = answer / 2
+
+
+    puts "Whats your height ?"
+    height = gets.chomp
+    int_height = height.to_i
+
+
+
+    full_answer = first_answer * int_height
+
+    puts "The answer is #{full_answer}"
+
+  end
+
 
 #circumferece of circle
 
-def circum_of_circle()
+def circum_of_circle
   puts "What is your radius?"
   radius_answer = gets.chomp
   int_radius_answer = radius_answer.to_i
