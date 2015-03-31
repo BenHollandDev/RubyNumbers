@@ -19,12 +19,16 @@ def main_function
   #squared
   if main_answer == "1"
     #do stuff
-    puts "What number do you want the sqare of ?\n"
-    square_answer = gets.chomp
-    int_square = square_answer.to_i
-    answer = int_square * int_square
-    puts "The answer is #{answer}"
-    restart_function()
+    puts "What square number do you want?"
+    user_answer = gets.chomp
+    def square(number_to_square)
+      int_number = number_to_square.to_i
+      answer = int_number * int_number
+      puts "The answer is #{answer}"
+
+    end
+    square(user_answer)
+
   #cubed
   elsif main_answer == "2"
     #do more stuff
